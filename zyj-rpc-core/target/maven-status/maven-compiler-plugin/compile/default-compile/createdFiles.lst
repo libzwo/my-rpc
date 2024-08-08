@@ -1,2 +1,3 @@
+com\zyj\zyjrpc\serializer\JsonSerializer.class
 com\zyj\zyjrpc\server\HttpServer.class
 com\zyj\zyjrpc\server\VertxHttpServer.class
