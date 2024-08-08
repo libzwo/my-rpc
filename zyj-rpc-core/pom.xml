@@ -5,7 +5,7 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>com.zyj</groupId>
-    <artifactId>zyj-rpc-easy</artifactId>
+    <artifactId>zyj-rpc-core</artifactId>
     <version>1.0-SNAPSHOT</version>
 
     <dependencies>
@@ -24,6 +24,17 @@
             <artifactId>lombok</artifactId>
             <version>1.18.30</version>
             <scope>provided</scope>
+        </dependency>
+        <dependency>
+            <groupId>junit</groupId>
+            <artifactId>junit</artifactId>
+            <version>RELEASE</version>
+            <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>ch.qos.logback</groupId>
+            <artifactId>logback-classic</artifactId>
+            <version>1.3.12</version>
         </dependency>
     </dependencies>
 
