@@ -1,6 +1,6 @@
 package com.zyj.zyjrpc.proxy;
 
-import com.yupi.yurpc.proxy.ServiceProxy;
+import com.zyj.zyjrpc.proxy.ServiceProxy;
 import com.zyj.zyjrpc.RpcApplication;
 
 import java.lang.reflect.Proxy;
