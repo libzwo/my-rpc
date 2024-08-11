@@ -1,17 +1,16 @@
 package com.zyj.example.provider;
 
-import cn.hutool.core.net.NetUtil;
 import com.zyj.example.common.service.UserService;
 import com.zyj.zyjrpc.RpcApplication;
 import com.zyj.zyjrpc.config.RegistryConfig;
 import com.zyj.zyjrpc.config.RpcConfig;
 import com.zyj.zyjrpc.model.ServiceMetaInfo;
-import com.zyj.zyjrpc.registry.EtcdRegistry;
 import com.zyj.zyjrpc.registry.LocalRegistry;
 import com.zyj.zyjrpc.registry.Registry;
 import com.zyj.zyjrpc.registry.RegistryFactory;
 import com.zyj.zyjrpc.server.HttpServer;
-import com.zyj.zyjrpc.server.VertxHttpServer;
+import com.zyj.zyjrpc.server.tcp.VertxTcpClient;
+import com.zyj.zyjrpc.server.tcp.VertxTcpServer;
 
 /**
  * 服务提供者示例
@@ -45,7 +44,7 @@ public class ProviderExample {
         }
 
         // 启动 web 服务
-        HttpServer httpServer = new VertxHttpServer();
-        httpServer.doStart(RpcApplication.getRpcConfig().getServerPort());
+        VertxTcpServer vertxTcpServer = new VertxTcpServer();
+        vertxTcpServer.doStart(8080);
     }
 }
