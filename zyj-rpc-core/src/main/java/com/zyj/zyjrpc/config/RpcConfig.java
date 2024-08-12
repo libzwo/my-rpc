@@ -1,5 +1,6 @@
 package com.zyj.zyjrpc.config;
 
+import com.zyj.zyjrpc.fault.retry.RetryStrategyKeys;
 import com.zyj.zyjrpc.loadbalancer.LoadBalancerKeys;
 import com.zyj.zyjrpc.serializer.SerializerKeys;
 import lombok.Data;
@@ -48,4 +49,9 @@ public class RpcConfig {
      * 负载均衡器
      */
     private String loadBalancer = LoadBalancerKeys.ROUND_ROBIN;
+
+    /**
+     * 重试策略
+     */
+    private String retryStrategy = RetryStrategyKeys.NO;
 }
