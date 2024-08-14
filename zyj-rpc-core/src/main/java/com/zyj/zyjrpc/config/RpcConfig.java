@@ -1,6 +1,8 @@
 package com.zyj.zyjrpc.config;
 
 import com.zyj.zyjrpc.fault.retry.RetryStrategyKeys;
+import com.zyj.zyjrpc.fault.tolerant.TolerantStrategy;
+import com.zyj.zyjrpc.fault.tolerant.TolerantStrategyKeys;
 import com.zyj.zyjrpc.loadbalancer.LoadBalancerKeys;
 import com.zyj.zyjrpc.serializer.SerializerKeys;
 import lombok.Data;
@@ -54,4 +56,9 @@ public class RpcConfig {
      * 重试策略
      */
     private String retryStrategy = RetryStrategyKeys.NO;
+
+    /**
+     * 容错策略
+     */
+    private String tolerantStrategy = TolerantStrategyKeys.FAIL_FAST;
 }
